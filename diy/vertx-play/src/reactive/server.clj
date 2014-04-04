@@ -13,4 +13,4 @@
     (http/on-request req-handler)
     (http/listen
        (get (System/getenv) "HOST" "127.0.0.1")
-       (Integer. (get (System/getenv) "PORT" "8080"))))
+       8080
