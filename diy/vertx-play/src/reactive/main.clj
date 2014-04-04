@@ -4,3 +4,4 @@
             [vertx.stream :as stream]))
 
 (println "main verticle har startat")
+(println "*******************" (System/getenv) )
