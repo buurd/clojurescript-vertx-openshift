@@ -8,7 +8,7 @@ export PORT=$OPENSHIFT_INTERNAL_PORT
 export HOST=$OPENSHIFT_INTERNAL_IP
 export HOME=$OPENSHIFT_DATA_DIR/home
 export LEIN_JVM_OPTS=-Duser.home=$HOME
-export APPDIR="examplenoir"
+export APPDIR="vertx-play"
 export LEIN_REPL_HOST=$HOST
 cd $OPENSHIFT_REPO_DIR/diy/$APPDIR
 $OPENSHIFT_REPO_DIR/bin/lein deps
