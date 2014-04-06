@@ -12,5 +12,6 @@ export APPDIR="vertx-play"
 export LEIN_REPL_HOST=$HOST
 cd $OPENSHIFT_REPO_DIR/diy/$APPDIR
 $OPENSHIFT_REPO_DIR/bin/lein deps
+$OPENSHIFT_REPO_DIR/bin/lein cljsbuild once
 $OPENSHIFT_REPO_DIR/bin/lein vertx run >${OPENSHIFT_DIY_LOG_DIR}/lein.log 2>&1 &
 disown
