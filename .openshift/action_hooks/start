@@ -10,7 +10,9 @@ export HOME=$OPENSHIFT_DATA_DIR/home
 export LEIN_JVM_OPTS=-Duser.home=$HOME
 export APPDIR="vertx-play"
 export LEIN_REPL_HOST=$HOST 
-cp $OPENSHIFT_REPO_DIRapp-root/repo/misc/profiles.clj $OPENSHIFT_REPO_DIRapp-root/data/home/.lein/
+echo $OPENSHIFT_DATA_DIR
+echo $OPENSHIFT_REPO_DIR
+cp $OPENSHIFT_REPO_DIR/misc/profiles.clj $OPENSHIFT_REPO_DIR/../data/home/.lein/
 cd $OPENSHIFT_REPO_DIR/diy/$APPDIR
 $OPENSHIFT_REPO_DIR/bin/lein deps
 $OPENSHIFT_REPO_DIR/bin/lein cljsbuild once
